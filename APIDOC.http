@@ -47,3 +47,40 @@ Authorization: Token 4eae96fd2c08567fc1bde3464de22c887ad99a41
 
 # api call for create songs
 ###
+POST http://127.0.0.1:8000/music/movies/2/song/ 
+Content-Type: application/json
+Authorization: Token 4eae96fd2c08567fc1bde3464de22c887ad99a41
+
+{
+    "title": "Thudakkam Mangalyam",
+    "language": "Malayalam",
+    "genre": "FOLK",
+    "singer": "Vijay Yesudas",
+    "duration": 3.42
+}
+
+#api call for retrieve
+###
+GET http://127.0.0.1:8000/music/movies/song/2/ 
+Accept: application/json
+Authorization: Token 4eae96fd2c08567fc1bde3464de22c887ad99a41
+
+# api call for update
+###
+PUT http://127.0.0.1:8000/music/movies/song/1/ 
+Content-Type: application/json
+Authorization: Token 4eae96fd2c08567fc1bde3464de22c887ad99a41
+
+{
+  "id": 2,
+  "title": "Mini Maharani",
+  "language": "Malayalam",
+  "genre": "ROMANTIC",
+  "singer": "Vishnu vijay",
+  "duration": 4.05,
+  "track_number": 3,
+  "created_at": "2026-10-27T15:53:56.519677Z",
+  "movie": 1,
+  "created_by": 1
+}
+#
