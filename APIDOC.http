@@ -83,4 +83,17 @@ Authorization: Token 4eae96fd2c08567fc1bde3464de22c887ad99a41
   "movie": 1,
   "created_by": 1
 }
-#
+  
+
+#==== review endpoints ====
+
+#api call for create reviews
+###
+POST http://127.0.0.1:8000/reviews/create/1/
+Content-Type: application/json
+Authorization: Token 4eae96fd2c08567fc1bde3464de22c887ad99a41
+
+{
+    "message": "Excellent movie!",
+    "rating": 9
+}
