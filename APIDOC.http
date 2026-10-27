@@ -1,0 +1,49 @@
+# api call for creating an user
+###
+POST http://127.0.0.1:8000/films/register/ 
+Content-Type: application/json
+
+{
+    "username":"user1",
+    "email":"user1@gmail.com",
+    "password":"Password@123"
+
+}
+
+#api call for token generation
+###
+POST http://127.0.0.1:8000/films/token/ 
+Content-Type: application/json
+
+{
+    "username":"user1",
+    "password":"Password@123"
+}
+
+#==== movie endpoints =====
+
+#api call for list movies
+###
+GET http://127.0.0.1:8000/films/movies/ 
+Accept: application/json
+Authorization: Token 4eae96fd2c08567fc1bde3464de22c887ad99a41
+
+# api call for adding movies
+###
+POST http://127.0.0.1:8000/films/movies/create/ 
+Content-Type: application/json
+Authorization: Token 4eae96fd2c08567fc1bde3464de22c887ad99a41
+
+{
+    "title": "Leo",
+    "language": "Tamil",
+    "genre": "ACTION",
+    "actor": "Vijay",
+    "release_year": 2023,
+    "rating": 7.4
+}
+
+#==== song endpoints =====
+
+# api call for create songs
+###
